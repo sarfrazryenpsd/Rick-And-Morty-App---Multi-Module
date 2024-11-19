@@ -3,6 +3,8 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.kotlinx.serialization)
     alias(libs.plugins.compose.compiler)
+    alias(libs.plugins.kapt.plugin)
+    alias(libs.plugins.dagger.hilt)
 }
 
 android {
@@ -64,6 +66,15 @@ dependencies {
     implementation(libs.androidx.material3)
 
     implementation(libs.bundles.ktor)
+
+    implementation(libs.coil)
+    implementation(libs.coil.network)
+
+    implementation(libs.compose.navigation)
+
+    implementation(libs.dagger.hilt.compose)
+    implementation(libs.dagger.hilt.android)
+    kapt(libs.dagger.hilt.compiler)
 
     implementation(libs.kotlinx.serialization)
     testImplementation(libs.junit)
